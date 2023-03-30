@@ -74,6 +74,7 @@ ul {
 
 }
 
+
 .menu-link:hover,
 .menu-link:focus {
     color: var(--accent-color);
@@ -631,7 +632,7 @@ transform: translate(-50%, -50%) scaleX(0);
 }
 
 .modal {
-        padding: 72px 24px 24px;
+        padding: 72px 24px 0;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -724,6 +725,7 @@ transform: translate(-50%, -50%) scaleX(0);
         background-color: transparent;
         outline: transparent;
         resize: none;
+        padding: 0;
         padding-left: 16px;
         padding-top: 8px;
 }
@@ -740,6 +742,8 @@ transform: translate(-50%, -50%) scaleX(0);
         border-color: #4D5AE5;
 
 }
+
+
 
 .input-icon {
         fill: #2E2F42;
@@ -772,8 +776,61 @@ transform: translate(-50%, -50%) scaleX(0);
         padding: 0;
         border: none;
         border-color: #4D5AE5;
-        margin-top: 24px;
+        margin-bottom: 10px;
 }
+
+.checkbox-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+                color: #8E8F99;
+}
+
+.checkbox-text {
+        display: flex;
+        gap: 8px;
+        
+}
+
+.checkbox-text::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        border-radius: 2px;
+        display: block;
+}
+
+.modal-check:checked + .checkbox-text::before {
+        background-color: #404BBF;
+        border: none;
+        background-image: url(../images/vector.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+.modal-field {
+        margin-top: 11px;
+        margin-bottom: 24px;
+}
+
+.visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+
+
+
 
         /* ================= /MODAL-WINDOW======================*/
 
@@ -803,6 +860,7 @@ transform: translate(-50%, -50%) scaleX(0);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
         outline: transparent;
+        padding-left: 16px;
 }
 
 
@@ -816,7 +874,7 @@ input[type=email]::placeholder {
         align-items: center;
         letter-spacing: 0.04em;
         color: #FFFFFF;
-        padding-left: 16px;
+        
 
 }
 
@@ -846,6 +904,8 @@ input[type=email]::placeholder {
 .top-form {
         display: flex;
 }
+
+
 
 
 
